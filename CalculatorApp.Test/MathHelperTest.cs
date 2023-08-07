@@ -13,7 +13,7 @@ public class MathHelperTest
         var xResult = mathHelper.IsEven(x);
         var yResult = mathHelper.IsEven(y);
         
-        Assert.True(xResult);
+        Assert.False(xResult);
         Assert.True(yResult);
     }
 }
