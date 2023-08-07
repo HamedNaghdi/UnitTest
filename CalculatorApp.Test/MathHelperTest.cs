@@ -28,12 +28,32 @@ public class MathHelperTest
     }
     
     [Theory]
+    [InlineData(1, 2, 3)]
+    [InlineData(-1, 3, 2)]
+    public void AddTest(int x, int y, int expectedValue)
+    {
+        var mathHelper = new MathHelper();
+        var result = mathHelper.Add(x, y);
+        Assert.Equal(expected: expectedValue, result);
+    }
+    
+    [Theory]
     [InlineData(new[]{1,2,3}, 6)]
     [InlineData(new[]{2,4,6}, 12)]
     public void SumTest(int[] values, int expectedValue)
     {
         var mathHelper = new MathHelper();
         var result = mathHelper.Sum(values);
+        Assert.Equal(expected: expectedValue, result);
+    }
+    
+    [Theory]
+    [InlineData(new[]{1,2,3}, 2)]
+    [InlineData(new[]{-2,6,3}, 7/3)]
+    public void AverageTest(int[] values, double expectedValue)
+    {
+        var mathHelper = new MathHelper();
+        var result = mathHelper.Average(values);
         Assert.Equal(expected: expectedValue, result);
     }
 }
