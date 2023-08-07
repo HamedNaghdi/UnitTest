@@ -26,4 +26,14 @@ public class MathHelperTest
         var result = mathHelper.Diff(x, y);
         Assert.Equal(expected: expectedValue, result);
     }
+    
+    [Theory]
+    [InlineData(new[]{1,2,3}, 6)]
+    [InlineData(new[]{2,4,6}, 12)]
+    public void SumTest(int[] values, int expectedValue)
+    {
+        var mathHelper = new MathHelper();
+        var result = mathHelper.Sum(values);
+        Assert.Equal(expected: expectedValue, result);
+    }
 }
