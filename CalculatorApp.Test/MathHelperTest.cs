@@ -16,4 +16,14 @@ public class MathHelperTest
         Assert.False(xResult);
         Assert.True(yResult);
     }
+
+    [Theory]
+    [InlineData(1, 2, 1)]
+    [InlineData(1, 3, 2)]
+    public void DiffTest(int x, int y, int expectedValue)
+    {
+        var mathHelper = new MathHelper();
+        var result = mathHelper.Diff(x, y);
+        Assert.Equal(expected: expectedValue, result);
+    }
 }
