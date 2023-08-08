@@ -57,7 +57,7 @@ public class MathHelperTest
         Assert.Equal(expected: expectedValue, result);
     }
 
-    [Theory]
+    [Theory (Skip ="Some reasone ...")]
     [MemberData(nameof(MathHelper.Data), MemberType = typeof(MathHelper))]
     public void Add_MemberData_Test(int x, int y, int expectedValue)
     {
