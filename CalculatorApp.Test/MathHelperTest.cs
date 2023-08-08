@@ -65,4 +65,13 @@ public class MathHelperTest
         var result = mathHelper.Add(x, y);
         Assert.Equal(expected: expectedValue, result);
     }
+
+    [Theory]
+    [ClassData(typeof(MathHelper))]
+    public void Add_ClassData_Test(int x, int y, int expectedValue)
+    {
+        var mathHelper = new MathHelper();
+        var result = mathHelper.Add(x, y);
+        Assert.Equal(expected: expectedValue, result);
+    }
 }

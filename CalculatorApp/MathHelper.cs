@@ -38,7 +38,7 @@ public class MathHelper : IEnumerable<object[]>
         yield return new object[] { 1, 2, 3 };
         yield return new object[] { -4, -6, -10 };
         yield return new object[] { -2, 2, 0 };
-        yield return new object[] { -int.MaxValue, 0, int.MaxValue };
+        yield return new object[] { -int.MaxValue, 0, -int.MaxValue };
     }
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
