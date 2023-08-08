@@ -56,4 +56,13 @@ public class MathHelperTest
         var result = mathHelper.Average(values);
         Assert.Equal(expected: expectedValue, result);
     }
+
+    [Theory]
+    [MemberData(nameof(MathHelper.Data), MemberType = typeof(MathHelper))]
+    public void Add_MemberData_Test(int x, int y, int expectedValue)
+    {
+        var mathHelper = new MathHelper();
+        var result = mathHelper.Add(x, y);
+        Assert.Equal(expected: expectedValue, result);
+    }
 }

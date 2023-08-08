@@ -26,12 +26,12 @@ public class MathHelper : IEnumerable<object[]>
         return sum/values.Length;
     }
 
-    public IEnumerable<object[]> Data => new List<object[]>
+    public static IEnumerable<object[]> Data => new List<object[]>
     {
         new object[] { 1, 2, 3 },
         new object[] { -4, -6, -10 },
         new object[] { -2, 2, 0 },
-        new object[]{-int.MaxValue, 0, int.MaxValue}
+        new object[]{-int.MaxValue, 0, -int.MaxValue}
     };
     public IEnumerator<object[]> GetEnumerator()
     {
